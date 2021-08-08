@@ -142,6 +142,80 @@ const style = StyleSheet.create({
     top: -35,
     left: -15,
   },
+
+  //----------Auth Section------------//
+
+  authTitle: {
+    color: "white",
+    fontSize: 36,
+    alignItems: "center",
+    textAlign: "center",
+    zIndex: 1,
+    marginBottom: 50,
+  },
+
+  authText: {
+    fontSize: 24,
+    color: "white",
+    marginTop: 40,
+    marginBottom: 30,
+  },
+
+  authInput: {
+    height: 40,
+    width: 250,
+    backgroundColor: "white",
+    paddingLeft: 25,
+    fontSize: 24,
+    borderRadius: 5,
+    marginBottom: 25,
+  },
+
+  authI: {
+    position: "absolute",
+    right: 65,
+    top: 440,
+    backgroundColor: "rgba(196, 196, 196, 1)",
+    height: 15,
+    width: 15,
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 15 / 2,
+  },
+
+  activePassMenu: {
+    position: "absolute",
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  greyedView: {
+    backgroundColor: "rgba(193, 177, 220, 0.5)",
+    position: "absolute",
+    height: "100%",
+    width: "100%",
+    zIndex: 3,
+  },
+
+  fullText: {
+    position: "absolute",
+    height: "100%",
+    width: "100%",
+  },
+
+  passErrBox: {
+    backgroundColor: "rgba(193, 177, 220, 1)",
+    height: 200,
+    width: 350,
+    position: "absolute",
+    bottom: -245,
+    borderRadius: 15,
+    padding: 25,
+    zIndex: 4,
+  },
 });
 
 export default style;

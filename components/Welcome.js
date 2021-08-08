@@ -23,7 +23,7 @@ const Welcome = () => {
 
       <TouchableOpacity
         style={style.nextButton}
-        onPress={() => Actions.other()}
+        onPress={() => Actions.auth()}
       >
         <View style={style.nextArrowContainer}>
           <View style={style.nextArrowLine}></View>
