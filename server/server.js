@@ -4,13 +4,18 @@ const express = require("express");
 const massive = require("massive");
 const session = require("express-session");
 
+//controllers
+const auth = require("./controllers/auth");
+
 const { PORT, SESSION_SECRET } = process.env;
 
 const app = express();
 
 app.use(express.json());
 
-app.get('/blah', ()=> {console.log('hit')})
+app.get("/test/rawr/", auth.addUser);
+
+// Authentication endpoints
 
 app.use(
   session({

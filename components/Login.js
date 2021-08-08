@@ -13,7 +13,7 @@ import Background from "./Background";
 import style from "./Styles";
 import { API_URL } from "@env";
 
-const Auth = () => {
+const Login = () => {
   const [passErrMenu, handlePassErr] = useState(false);
 
   const hitTest = () => {
@@ -26,18 +26,11 @@ const Auth = () => {
   return (
     <View style={style.view}>
       <Background />
-      <Text style={style.authTitle}>Create an Account!</Text>
+      <Text style={style.authTitle}>Login to Account!</Text>
       <Text style={style.authText}> Enter your email address</Text>
       <TextInput style={style.authInput} placeholder={"email"} />
-      <TouchableOpacity
-        style={style.authI}
-        onPress={() => handlePassErr(!passErrMenu)}
-      >
-        <Text>i</Text>
-      </TouchableOpacity>
-      <Text style={style.authText}> Choose a password</Text>
+      <Text style={style.authText}> Enter Your password</Text>
       <TextInput style={style.authInput} placeholder={"password"} />
-      <TextInput style={style.authInput} placeholder={"re-enter password"} />
 
       {passErrMenu ? (
         <View style={style.activePassMenu}>
@@ -73,16 +66,7 @@ const Auth = () => {
         <View></View>
       )}
 
-      <TouchableOpacity onPress={() => Actions.login()}>
-        <Text style={{ color: "white" }}>
-          Already have an account? Login here
-        </Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={style.nextButton}
-        onPress={() => Actions.transitionPage()}
-      >
+      <TouchableOpacity style={style.nextButton} onPress={() => hitTest()}>
         <View style={style.nextArrowContainer}>
           <View style={style.nextArrowLine}></View>
           <View style={style.nextArrowSlantOne}></View>
@@ -93,4 +77,4 @@ const Auth = () => {
   );
 };
 
-export default Auth;
+export default Login;

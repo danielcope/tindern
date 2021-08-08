@@ -193,11 +193,26 @@ const style = StyleSheet.create({
   },
 
   greyedView: {
-    backgroundColor: "rgba(193, 177, 220, 0.5)",
+    backgroundColor: "rgba(193, 177, 220, 0.95)",
     position: "absolute",
     height: "100%",
     width: "100%",
     zIndex: 3,
+  },
+
+  listLine: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+
+  bulletPoint: {
+    backgroundColor: "rgba(49, 33, 82, 1)",
+    borderRadius: 5 / 2,
+    height: 5,
+    width: 5,
+    marginRight: 12,
+    marginLeft: 17,
   },
 
   fullText: {
@@ -207,7 +222,7 @@ const style = StyleSheet.create({
   },
 
   passErrBox: {
-    backgroundColor: "rgba(193, 177, 220, 1)",
+    backgroundColor: "rgba(156, 130, 198, 1)",
     height: 200,
     width: 350,
     position: "absolute",
@@ -215,6 +230,15 @@ const style = StyleSheet.create({
     borderRadius: 15,
     padding: 25,
     zIndex: 4,
+  },
+
+  //Transition Page View
+
+  centeredText: {
+    color: "white",
+    fontSize: 30,
+    textAlign: "center",
+    width: 300,
   },
 });
 
