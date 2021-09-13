@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import { withSafeAreaInsets } from "react-native-safe-area-context";
 
 const style = StyleSheet.create({
   view: {
@@ -17,6 +16,12 @@ const style = StyleSheet.create({
     right: 25,
   },
 
+  scrollView: {
+    height: "100%",
+    width: "100%",
+    flex: 1,
+  },
+
   //   Arrow     //
 
   nextArrowContainer: {
@@ -24,7 +29,6 @@ const style = StyleSheet.create({
     height: 50,
     width: 80,
     borderRadius: 5,
-
     flex: 1,
     justifyContent: "center",
     alignContent: "center",
@@ -42,6 +46,7 @@ const style = StyleSheet.create({
     borderRadius: 3,
     position: "absolute",
   },
+
   nextArrowSlantOne: {
     backgroundColor: "#312152",
     borderTopColor: "#312152",
@@ -193,7 +198,7 @@ const style = StyleSheet.create({
   },
 
   greyedView: {
-    backgroundColor: "rgba(193, 177, 220, 0.95)",
+    backgroundColor: "rgba(157, 147, 172, 1)",
     position: "absolute",
     height: "100%",
     width: "100%",
@@ -226,10 +231,10 @@ const style = StyleSheet.create({
     height: 200,
     width: 350,
     position: "absolute",
-    bottom: -245,
     borderRadius: 15,
     padding: 25,
     zIndex: 4,
+    elevation: 10,
   },
 
   //Transition Page View
@@ -239,6 +244,35 @@ const style = StyleSheet.create({
     fontSize: 30,
     textAlign: "center",
     width: 300,
+  },
+
+  //Questions View
+
+  questionBlock: {},
+
+  questionText: {
+    color: "white",
+    fontSize: 30,
+    marginBottom: 45,
+    textAlign: "center",
+  },
+
+  eachQ: {},
+
+  separator: {
+    backgroundColor: "white",
+    height: 1,
+    width: "80%",
+    marginTop: 45,
+    marginBottom: 45,
+  },
+
+  questionsInput: {
+    backgroundColor: "white",
+    height: 40,
+    width: 120,
+    paddingLeft: 25,
+    borderRadius: 5,
   },
 });
 

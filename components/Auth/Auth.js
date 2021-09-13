@@ -1,27 +1,18 @@
-import React, { useState, useEffect } from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  TextInput,
-  TouchableHighlight,
-} from "react-native";
+// imported mods
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity, TextInput } from "react-native";
 import { Actions } from "react-native-router-flux";
-import axios from "axios";
 
-import Background from "./Background";
-import style from "./Styles";
-import { API_URL } from "@env";
+// Imported Components
+import Background from "../Background";
+import Arrow from "../Arrow";
 
+//Style page
+import style from "../Styles";
+
+//Components
 const Auth = () => {
   const [passErrMenu, handlePassErr] = useState(false);
-
-  const hitTest = () => {
-    axios
-      .get(`${API_URL}/test/rawr/`)
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log(err));
-  };
 
   return (
     <View style={style.view}>
@@ -83,11 +74,7 @@ const Auth = () => {
         style={style.nextButton}
         onPress={() => Actions.transitionPage()}
       >
-        <View style={style.nextArrowContainer}>
-          <View style={style.nextArrowLine}></View>
-          <View style={style.nextArrowSlantOne}></View>
-          <View style={style.nextArrowSlantTwo}></View>
-        </View>
+        <Arrow />
       </TouchableOpacity>
     </View>
   );

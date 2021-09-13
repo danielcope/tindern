@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  TextInput,
-  TouchableHighlight,
-} from "react-native";
-import { Actions } from "react-native-router-flux";
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity, TextInput } from "react-native";
 import axios from "axios";
 
-import Background from "./Background";
-import style from "./Styles";
+import Background from "../Background";
+import style from "../Styles";
 import { API_URL } from "@env";
 
 const Login = () => {
