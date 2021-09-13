@@ -5,10 +5,10 @@ import WhatBirthday from "./EachQuestion/WhatBirthday";
 import WhatCampaign from "./EachQuestion/WhatCampaign";
 import DMQuestion from "./EachQuestion/DMQuestion";
 import CanHost from "./EachQuestion/CanHost";
+// import Arrow from "../../Arrow";
 
 import { Actions } from "react-native-router-flux";
 import Background from "../Background";
-// import DateTimePicker from '@react-native-community/datetimepicker';
 
 import style from "../Styles";
 
@@ -45,11 +45,7 @@ const InitQs = () => {
           style={style.nextButton}
           onPress={() => Actions.availability()}
         >
-          <View style={style.nextArrowContainer}>
-            <View style={style.nextArrowLine}></View>
-            <View style={style.nextArrowSlantOne}></View>
-            <View style={style.nextArrowSlantTwo}></View>
-          </View>
+          {/* <Arrow /> */}
         </TouchableOpacity>
       </View>
     </ScrollView>

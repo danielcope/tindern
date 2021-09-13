@@ -41,7 +41,6 @@ export default function App() {
           title="Availability"
           hideNavBar={true}
         />
-
       </Stack>
     </Router>
   );

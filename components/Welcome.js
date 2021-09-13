@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { Actions } from "react-native-router-flux";
+import Arrow from "./Arrow";
 
 import Background from "./Background";
 import style from "./Styles";
@@ -25,11 +26,7 @@ const Welcome = () => {
         style={style.nextButton}
         onPress={() => Actions.auth()}
       >
-        <View style={style.nextArrowContainer}>
-          <View style={style.nextArrowLine}></View>
-          <View style={style.nextArrowSlantOne}></View>
-          <View style={style.nextArrowSlantTwo}></View>
-        </View>
+        <Arrow />
       </TouchableOpacity>
     </View>
   );

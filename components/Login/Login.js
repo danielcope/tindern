@@ -5,6 +5,7 @@ import axios from "axios";
 import Background from "../Background";
 import style from "../Styles";
 import { API_URL } from "@env";
+import Arrow from "../Arrow";
 
 const Login = () => {
   const [passErrMenu, handlePassErr] = useState(false);
@@ -60,11 +61,7 @@ const Login = () => {
       )}
 
       <TouchableOpacity style={style.nextButton} onPress={() => hitTest()}>
-        <View style={style.nextArrowContainer}>
-          <View style={style.nextArrowLine}></View>
-          <View style={style.nextArrowSlantOne}></View>
-          <View style={style.nextArrowSlantTwo}></View>
-        </View>
+        <Arrow/>
       </TouchableOpacity>
     </View>
   );
