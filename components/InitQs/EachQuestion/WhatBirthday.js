@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import DateTimePicker from "@react-native-community/datetimepicker";
+
+import CalendarIcon from "./../../Icons/CalendarIcon";
 
 import style from "../../Styles";
 
@@ -11,18 +13,19 @@ const WhatBirthday = () => {
   const [dateString, setDateString] = useState();
 
   useEffect(() => {
-    const strSplit = date.toUTCString().split(" ").slice(1, 4);
-    setDateString(strSplit.join(" "));
+    setDateString(simpleDate(date));
   }, []);
 
   const handleChange = (event, selectedDate) => {
     const currentDate = selectedDate || date;
     setShow(Platform.OS === "ios");
     setDate(currentDate);
-    setDateString(() => {
-      const strSplit = currentDate.toUTCString().split(" ").slice(1, 4);
-      return strSplit.join(" ");
-    });
+    setDateString(simpleDate(currentDate));
+  };
+
+  const simpleDate = (date) => {
+    const strSplit = date.toUTCString().split(" ").slice(1, 4);
+    return strSplit.join(" ");
   };
 
   const showMode = (currentMode) => {
@@ -37,8 +40,19 @@ const WhatBirthday = () => {
   return (
     <View style={style.questionBlock}>
       <Text style={style.questionText}>When is your birthday?</Text>
-      <View>
-        <Button onPress={showDatePicker} title={"Show date picker!"}></Button>
+      <View style={style.calendarPressableContainer}>
+        <TouchableOpacity
+          onPress={showDatePicker}
+          style={style.calendarPressable}
+        >
+          <CalendarIcon />
+          <Text style={style.calendarText}>{dateString}</Text>
+          <View style={style.downArrow}>
+            <View style={style.topLineArrow}></View>
+            <View style={style.midLineArrow}></View>
+            <View style={style.botLineArrow}></View>
+          </View>
+        </TouchableOpacity>
       </View>
       {show && (
         <DateTimePicker
@@ -49,15 +63,8 @@ const WhatBirthday = () => {
           onChange={handleChange}
         />
       )}
-      <Text>{dateString}</Text>
     </View>
   );
 };
 
 export default WhatBirthday;
-
-const datePickerButton = () => {
-  <TouchableOpacity>
-    <Text>{dateString}</Text>
-  </TouchableOpacity>;
-};

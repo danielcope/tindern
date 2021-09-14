@@ -198,11 +198,22 @@ const style = StyleSheet.create({
   },
 
   greyedView: {
-    backgroundColor: "rgba(157, 147, 172, 1)",
+    backgroundColor: "rgba(0, 0, 0, 0.75)",
     position: "absolute",
     height: "100%",
     width: "100%",
     zIndex: 3,
+  },
+
+  passErrBox: {
+    backgroundColor: "#E3DFE9",
+    height: 200,
+    width: 350,
+    position: "absolute",
+    borderRadius: 15,
+    padding: 25,
+    zIndex: 4,
+    elevation: 10,
   },
 
   listLine: {
@@ -226,17 +237,6 @@ const style = StyleSheet.create({
     width: "100%",
   },
 
-  passErrBox: {
-    backgroundColor: "rgba(156, 130, 198, 1)",
-    height: 200,
-    width: 350,
-    position: "absolute",
-    borderRadius: 15,
-    padding: 25,
-    zIndex: 4,
-    elevation: 10,
-  },
-
   //Transition Page View
 
   centeredText: {
@@ -248,7 +248,9 @@ const style = StyleSheet.create({
 
   //Questions View
 
-  questionBlock: {},
+  questionBlock: {
+    height: 200,
+  },
 
   questionText: {
     color: "white",
@@ -273,6 +275,63 @@ const style = StyleSheet.create({
     width: 120,
     paddingLeft: 25,
     borderRadius: 5,
+  },
+
+  calendarPressableContainer: {
+    height: "50%",
+  },
+
+  calendarPressable: {
+    height: "100%",
+    backgroundColor: "white",
+    borderRadius: 15,
+    textAlign: "center",
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    padding: 10,
+  },
+
+  calendarText: {
+    fontSize: 20,
+    color: "#312152",
+  },
+
+  //Down Arrow on the When is you birthday question
+
+  downArrow: {
+    width: "20%",
+    height: "80%",
+    justifyContent: "space-around",
+    alignContent: "center",
+    paddingBottom: 10,
+    paddingTop: 10,
+  },
+
+  topLineArrow: {
+    borderColor: "#312152",
+    borderWidth: 2,
+    backgroundColor: "#312152",
+    borderRadius: 5,
+  },
+
+  midLineArrow: {
+    borderColor: "#312152",
+    borderWidth: 2,
+    backgroundColor: "#312152",
+    borderRadius: 5,
+    width: "66%",
+    marginLeft: "17%",
+  },
+
+  botLineArrow: {
+    borderColor: "#312152",
+    borderWidth: 2,
+    backgroundColor: "#312152",
+    borderRadius: 5,
+    width: "33%",
+    marginLeft: "33%",
   },
 });
 
