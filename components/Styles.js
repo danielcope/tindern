@@ -249,7 +249,7 @@ const style = StyleSheet.create({
   //Questions View
 
   questionBlock: {
-    height: 200,
+    height: 250,
   },
 
   questionText: {
@@ -332,6 +332,35 @@ const style = StyleSheet.create({
     borderRadius: 5,
     width: "33%",
     marginLeft: "33%",
+  },
+
+  //Campaign Question
+
+  campaignAnswersContainer: {
+    width: "90%",
+    flex: 1,
+    justifyContent: "space-between",
+    paddingLeft: "25%",
+  },
+
+  radioRow: {
+    marginBottom: 25,
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+
+  radioButton: {
+    height: 25,
+    width: 25,
+    backgroundColor: "white",
+    marginRight: 20,
+    borderRadius: 25 / 2,
+  },
+
+  campaignAnswersText: {
+    color: "white",
+    fontSize: 18,
   },
 });
 

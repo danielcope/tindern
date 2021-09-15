@@ -17,21 +17,15 @@ const InitQs = () => {
     <ScrollView style={style.scrollView}>
       <View style={style.view}>
         <Background />
-        {/* Quesiton 1 */}
         <WhatName />
         <Separator />
-        {/* Question 2 */}
         <WhatBirthday />
         <Separator />
-        {/* Question 3 */}
         <WhatCampaign />
         <Separator />
-        {/* Question 4 */}
         <DMQuestion />
         <Separator />
-        {/* Question 5 */}
         <CanHost />
-
         <TouchableOpacity
           style={style.nextButton}
           onPress={() => Actions.availability()}
